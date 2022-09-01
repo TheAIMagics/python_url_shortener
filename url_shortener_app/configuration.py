@@ -1,5 +1,8 @@
+import sys
 from pydantic import BaseSettings
 from functools import lru_cache
+from logger import logging
+from exception import URLShortnerException
 
 class Settings(BaseSettings):
     env_name: str = "Local"
@@ -12,6 +15,9 @@ class Config:
 @lru_cache
 # @lru_cache decorator allows you to cache the result of get_settings() using the LRU strategy.
 def get_settings() -> Settings:
-    settings = Settings()
-    print(f"Loading settings for: {settings.env_name}")
-    return settings
+    try:
+        settings = Settings()
+        print(f"Loading settings for: {settings.env_name}")
+        return settings
+    except Exception as e:
+        raise URLShortnerException(e,sys)

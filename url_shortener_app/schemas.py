@@ -11,6 +11,9 @@ class URL(URLBase):
     clicks: int
 
     class Config:
+        '''We tell pydantic with orm_mode = True to work with a database model.
+        ORM = Object-Relational Mapping
+        '''
         orm_mode = True
 
 class URLInfo(URL):
