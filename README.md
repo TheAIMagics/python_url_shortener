@@ -1,7 +1,7 @@
 
 <h1 align="center">Python URL Shortener </h1>
 <hr>
-###### URLs can be extremely long and not user-friendly. A URL shortener reduces the number of characters in a URL, making it easier to read, remember, and share.
+<h5> URLs can be extremely long and not user-friendly. A URL shortener reduces the number of characters in a URL, making it easier to read, remember, and share.</h5>
 
 ## <img src="https://c.tenor.com/NCRHhqkXrJYAAAAi/programmers-go-internet.gif" width="25">  <b>Approach</b>
 <hr>
