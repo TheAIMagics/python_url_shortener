@@ -34,7 +34,10 @@ Install requirements
 ```
 pip install -r requirements.txt
 ```
-
+Run the live server using uvicorn
+```
+uvicorn app:app --reload
+```
 To launch swagger ui
 ```
 http://127.0.0.1:8000/docs
@@ -43,7 +46,7 @@ Check data in database
 ```
 - Open Python Interpreter & run below commands
 
-        from url_shortener_app.database import SessionLocal
+        from url_shortener_app.components.database import get_settings 
         db = SessionLocal()
         from url_shortener_app.models import URL
         db.query(URL).all()

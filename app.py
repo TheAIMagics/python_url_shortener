@@ -4,10 +4,10 @@ from fastapi import Depends ,FastAPI, HTTPException, Request
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
-from . import schemas, models
-from .database import SessionLocal, engine
-from logger import logging
-from exception import URLShortnerException
+from url_shortener_app.components import schemas, models
+from url_shortener_app.components.database import SessionLocal, engine
+from url_shortener_app.logger import logging
+from url_shortener_app.exception import URLShortnerException
 
 app = FastAPI()
 

@@ -1,8 +1,7 @@
 import sys
 from pydantic import BaseSettings
 from functools import lru_cache
-from logger import logging
-from exception import URLShortnerException
+from url_shortener_app.exception import URLShortnerException
 
 class Settings(BaseSettings):
     env_name: str = "Local"
